@@ -19,7 +19,6 @@ print(task1())'''
 def task2():
     author = (input(("Enter author's name").lower()))
     author = author.replace(' ','')
-    stop_int=0
     for row in massive:
         file_aut_str = ''
         file_aut_str_reversed = ''
@@ -30,14 +29,11 @@ def task2():
         for i in range(len(file_aut)):
             file_aut_str = file_aut_str + file_aut[i]
 
-        if author == file_aut_str or author == file_aut_str_reversed:
+        if author in file_aut_str or author in file_aut_str_reversed:
             print(row)
-        else:
-            stop_int=1
-    if stop_int == 1: print("Книги не найдены :(")
+        
 print(task2())
 '''
-print(task2())
 def task3():
     with open('bibliography.txt',"w", encoding='utf-8') as f:
         numbers = []
@@ -67,6 +63,7 @@ def task4():
     print('Value:',value_list)
     print('CharCode:',char_code_list)
 print(task4()) '''
+
 
 
 
